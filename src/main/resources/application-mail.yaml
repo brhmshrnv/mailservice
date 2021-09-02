@@ -1,0 +1,13 @@
+spring:
+  mail:
+    host: "smtp.gmail.com"
+    port: 587
+    username: "dev.eTaskify@gmail.com"
+    password: "gfxzmlehrbhpizxd"
+    properties.mail.smtp:
+      auth: true
+      starttls.enable: true
+    protocol: "smtp"
+    templates:
+      path: mail-templates
+
