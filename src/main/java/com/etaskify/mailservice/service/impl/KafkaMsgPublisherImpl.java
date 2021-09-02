@@ -22,6 +22,7 @@ public class KafkaMsgPublisherImpl implements KafkaMsgPublisher {
             listenableFuture.get();
         } catch (Exception e) {
             log.error("Error Sending the message and the exception is {}", e.getMessage());
+            //TODO change to KafkaMessagePublisher exception :: extend serviceUnavailableException
             throw new RuntimeException();
         }
         listenableFuture.addCallback(result -> handleSuccess(key, value.toString(), result),
